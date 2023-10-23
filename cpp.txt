@@ -1,0 +1,38 @@
+#include <iostream>
+#include <string>
+
+class Product {
+private:
+    int price;
+    std::string productName;
+
+public:
+    Product(int price, const std::string& productName) : price(price), productName(productName) {}
+
+    int getPrice() const {
+        return price;
+    }
+
+    const std::string& getProductName() const {
+        return productName;
+    }
+
+    void setPrice(int newPrice) {
+        price = newPrice;
+    }
+};
+
+int main() {
+    Product product1(500, "Пательня");
+    Product product2(450, "Чайник");
+
+    std::cout << "Товар 1: Ціна = " << product1.getPrice() << ", Назва = " << product1.getProductName() << std::endl;
+    std::cout << "Товар 2: Ціна = " << product2.getPrice() << ", Назва = " << product2.getProductName() << std::endl;
+
+    // Зміна ціни товару 1
+    product1.setPrice(470);
+
+    std::cout << "Після зміни ціни товару 1: Ціна = " << product1.getPrice() << ", Назва = " << product1.getProductName() << std::endl;
+
+    return 0;
+}

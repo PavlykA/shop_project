@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    class Product
+    {
+        public int Price { get; set; }
+        public string ProductName { get; set; }
+
+        public Product(int price, string productName)
+        {
+            Price = price;
+            ProductName = productName;
+        }
+    }
+
+    static void Main()
+    {
+        Product product1 = new Product(1100, "Матрац");
+        Product product2 = new Product(500, "Ковдра");
+
+        Console.WriteLine("Товар 1: Ціна = " + product1.Price + ", Назва = " + product1.ProductName);
+        Console.WriteLine("Товар 2: Ціна = " + product2.Price + ", Назва = " + product2.ProductName);
+
+        // Зміна ціни товару 1
+        product1.Price = 1500;
+
+        Console.WriteLine("Після зміни ціни товару 1: Ціна = " + product1.Price + ", Назва = " + product1.ProductName);
+    }
+}

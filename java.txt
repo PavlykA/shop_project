@@ -1,0 +1,40 @@
+public class Main {
+    public static class Product {
+        private int price;
+        private String productName;
+
+        public Product(int price, String productName) {
+            this.price = price;
+            this.productName = productName;
+        }
+
+        public int getPrice() {
+            return price;
+        }
+
+        public String getProductName() {
+            return productName;
+        }
+
+        public void setPrice(int price) {
+            this.price = price;
+        }
+
+        public void setProductName(String productName) {
+            this.productName = productName;
+        }
+    }
+
+    public static void main(String[] args) {
+        Product product1 = new Product(10, "Спальний мішок");
+        Product product2 = new Product(20, "Палатка");
+
+        System.out.println("Товар 1: Ціна = " + product1.getPrice() + ", Назва = " + product1.getProductName());
+        System.out.println("Товар 2: Ціна = " + product2.getPrice() + ", Назва = " + product2.getProductName());
+
+        // Зміна ціни товару 1
+        product1.setPrice(15);
+
+        System.out.println("Після зміни ціни товару 1: Ціна = " + product1.getPrice() + ", Назва = " + product1.getProductName());
+    }
+}
